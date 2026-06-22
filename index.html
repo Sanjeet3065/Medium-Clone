@@ -1,0 +1,174 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    
+</head>
+<body>
+
+<header class="navbar">
+    <div class="left-nav">
+        <i class="fa-solid fa-bars menu-btn"></i>
+        <h1>Medium</h1>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+
+    <div class="right-nav">
+        <button class="app-btn">
+            <i class="fa-solid fa-qrcode"></i>
+            Get app
+        </button>
+
+        <div class="write">
+            <i class="fa-regular fa-pen-to-square"></i>
+            Write
+        </div>
+
+        <i class="fa-regular fa-bell"></i>
+        <i class="fa-solid fa-circle-user profile"></i>
+    </div>
+</header>
+
+<div class="container">
+
+    <aside class="left-sidebar">
+        <ul>
+            <li>Home</li>
+            <li>Library</li>
+            <li>Profile</li>
+            <li>Stories</li>
+            <li>Stats</li>
+        </ul>
+    </aside>
+
+    <main class="feed">
+
+        <article class="post">
+            <div class="author">
+                <img src="https://picsum.photos/40" alt="">
+                <span>Netflix Technology Blog</span>
+            </div>
+
+            <h2>The Evolution of Recommendation Systems</h2>
+
+            <p>
+                Discover how recommendation engines continue to evolve
+                and influence digital experiences worldwide.
+            </p>
+
+            <div class="post-footer">
+                <span>Jun 14 · 6 min read</span>
+            </div>
+        </article>
+
+        <article class="post">
+            <div class="author">
+                <img src="https://picsum.photos/41" alt="">
+                <span>JavaScript Weekly</span>
+            </div>
+
+            <h2>Modern JavaScript Patterns You Should Know</h2>
+
+            <p>
+                Explore practical JavaScript patterns that make
+                applications easier to maintain.
+            </p>
+
+            <div class="post-footer">
+                <span>Jun 12 · 8 min read</span>
+            </div>
+        </article>
+
+        <article class="post">
+            <div class="author">
+                <img src="https://picsum.photos/42" alt="">
+                <span>Frontend Daily</span>
+            </div>
+
+            <h2>Building Better User Interfaces</h2>
+
+            <p>
+                Learn design principles used by modern websites and
+                applications.
+            </p>
+
+            <div class="post-footer">
+                <span>Jun 10 · 5 min read</span>
+            </div>
+        </article>
+
+    </main>
+
+    <aside class="right-sidebar">
+
+        <h3>Staff Picks</h3>
+
+        <div class="pick">
+            <h4>Why Good Developers Read More</h4>
+            <span>4 min read</span>
+        </div>
+
+        <div class="pick">
+            <h4>The Future of Artificial Intelligence</h4>
+            <span>7 min read</span>
+        </div>
+
+        <div class="pick">
+            <h4>Mastering CSS Layouts</h4>
+            <span>5 min read</span>
+        </div>
+
+        <h3>Recommended Topics</h3>
+
+        <div class="topics">
+            <span>Programming</span>
+            <span>JavaScript</span>
+            <span>Web Development</span>
+            <span>Technology</span>
+            <span>AI</span>
+        </div>
+
+    </aside>
+
+</div>
+
+
+<div class="editor-modal">
+
+    <div class="editor-box">
+
+        <h2>Create Story</h2>
+
+        <input
+            type="text"
+            id="postTitle"
+            placeholder="Enter Title..."
+        >
+
+        <textarea
+            id="postDesc"
+            placeholder="Write your story..."
+        ></textarea>
+
+        <div class="editor-btns">
+            <button id="closeBtn">Cancel</button>
+            <button id="publishBtn">Publish</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
