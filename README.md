@@ -63,7 +63,7 @@ During the internship at **Coding Blocks**, interns were tasked with reverse-eng
 
 ```plaintext
 Medium-Clone/
-├── medium.html          # Semantic document structure & layout definitions
+├── index.html           # Semantic document structure & layout definitions
 ├── medium.css           # Styling rules, Flexbox grid, animations & media queries
 ├── medium.js            # DOM logic (modal toggle, story creation, mobile drawer)
 ├── README.md            # Comprehensive project documentation
@@ -74,7 +74,7 @@ Medium-Clone/
 
 ## 🔬 Codebase Analysis & Technical Highlights
 
-### 1. Semantic Architecture (`medium.html`)
+### 1. Semantic Architecture (`index.html`)
 The HTML is structured with modern HTML5 semantics for accessibility and clear hierarchy:
 - `<header class="navbar">` encapsulates brand identity, search, and navigation CTAs.
 - `<div class="container">` coordinates the primary 3-column desktop layout.
@@ -131,8 +131,8 @@ You only need a modern web browser (Google Chrome, Firefox, Microsoft Edge, or S
    ```
 
 3. **Open the application:**
-   - Double click `medium.html` to launch it directly in your default browser.
-   - Alternatively, use the **Live Server** extension in VS Code (`Right click on medium.html` ➔ `Open with Live Server`).
+   - Double click `index.html` to launch it directly in your default browser.
+   - Alternatively, use the **Live Server** extension in VS Code (`Right click on index.html` ➔ `Open with Live Server`).
 
 ---
 
