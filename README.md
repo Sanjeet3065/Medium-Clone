@@ -1,120 +1,159 @@
-# Medium Clone
+# 📝 Medium Clone — Web Development Internship Project
 
-A responsive Medium-inspired blogging homepage built as a front-end web project. This project was developed as part of a Coding Block internship task to practice HTML, CSS, and JavaScript layout design and interactive UI behavior.
+[![Internship Task](https://img.shields.io/badge/Internship%20Task-Coding%20Blocks-orange?style=for-the-badge&logo=codeforces)](https://codingblocks.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
 
-## Project Overview
+A responsive, pixel-conscious front-end clone of the popular blogging platform **Medium**. This project was developed as a hands-on **Internship Task during the Coding Blocks Internship Program**, created to simulate real-world front-end engineering workflows using vanilla web technologies.
 
-This project recreates the look and feel of the Medium homepage with:
+---
 
-- a top navigation bar
-- left and right sidebars
-- a central article feed
-- author cards and article metadata
-- a floating story publishing modal
-- a mobile-responsive layout
-- interactive menu toggle for smaller screens
+## 🎓 Internship Task Context & Background
 
-The goal was to build a clean and modern reading interface similar to Medium while keeping the implementation simple and beginner-friendly.
+> **Task Assignment:** Front-End Clone & Interactive UI Development  
+> **Organization:** Coding Blocks  
+> **Role:** Web Development Intern  
+> **Focus Areas:** Semantic Markup, CSS Flexbox Layouts, Responsive Breakpoints, and Dynamic DOM Manipulation  
 
-## Internship Task Context
+During the internship at **Coding Blocks**, interns were tasked with reverse-engineering and replicating the core user interface and interactions of a major web platform. This project serves as a showcase of:
+- Translating real-world UI/UX designs into clean, maintainable HTML/CSS code.
+- Building robust component layouts without external UI frameworks (No Bootstrap/Tailwind — pure vanilla CSS).
+- Implementing dynamic, event-driven user interaction using vanilla JavaScript DOM APIs.
+- Ensuring mobile-first adaptability with off-canvas navigation and responsive breakpoints.
 
-This repository was created as part of the Coding Block internship training program. The challenge focused on building a front-end clone of a popular web application interface using core web technologies.
+---
 
-The objective was to:
+## ✨ Features
 
-- strengthen HTML structure and semantic markup
-- design a modern user interface with CSS
-- implement interactive functionality with JavaScript
-- create a visually appealing and responsive front-end experience
+- 🧭 **Medium-Inspired Navigation Bar**
+  - Brand header with iconic Medium logo typography.
+  - Sleek search input pill with embedded Font Awesome icon.
+  - Call-to-action buttons (`Get app`, `Write`), notification bell, and user avatar.
+- 📱 **3-Column Desktop Layout (Flexbox)**
+  - **Left Sidebar:** Quick navigation links (Home, Library, Profile, Stories, Stats).
+  - **Main Feed:** Curated stream of blog cards featuring author thumbnail, publication name, article title, short synopsis, and reading time metadata.
+  - **Right Sidebar:** Staff Picks section and clickable Recommended Topic pills (`Programming`, `JavaScript`, `Web Development`, `Technology`).
+- ✍️ **Interactive Story Publishing Modal**
+  - Click on the **"Write"** button in the navbar to trigger a modal editor.
+  - Live form validation: ensures titles and story bodies are not empty.
+  - Dynamic publishing: prepends newly created stories straight to the top of the feed (`feed.prepend()`) with instant "Just Now" timestamps.
+  - Form state reset and modal auto-close upon publishing.
+- 📲 **Fully Responsive & Mobile-Optimized**
+  - Hamburger menu toggle (`.menu-btn`) for screens below `768px`.
+  - Smooth off-canvas sliding navigation drawer (`left: -250px` to `0`).
+  - Graceful degradation: hides secondary sidebars to keep reading experience distraction-free on smartphones.
 
-## Tech Stack
+---
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome icons
+## 🛠️ Tech Stack & Tools
 
-## Features
+| Technology | Purpose |
+| :--- | :--- |
+| **HTML5** | Semantic structure (`<header>`, `<aside>`, `<main>`, `<article>`) |
+| **CSS3** | Flexbox layouts, custom transitions, media queries, modern typography |
+| **JavaScript (ES6+)** | Event listeners, DOM manipulation, dynamic element creation, form validation |
+| **Font Awesome 6.7.2** | Icons for search, hamburger menu, notifications, write icon, and user profiles |
+| **Picsum Photos API** | Dynamic placeholder avatars for publications and authors |
 
-- Medium-like top navigation bar
-- Search bar in the header
-- Sidebar navigation menu
-- Article feed with multiple blog cards
-- Staff picks and recommended topic sections
-- Create Story modal
-- Publish new story dynamically to the feed
-- Responsive layout for mobile devices
-- Smooth toggle menu behavior on smaller screens
+---
 
-## Project Structure
+## 📁 Project Architecture
 
-```bash
+```plaintext
 Medium-Clone/
-├── medium.html      # Main page structure
-├── medium.css       # Styling and layout
-├── medium.js        # Interactive functionality
-├── README.md        # Project documentation
-└── .vscode/         # Editor settings
+├── medium.html          # Semantic document structure & layout definitions
+├── medium.css           # Styling rules, Flexbox grid, animations & media queries
+├── medium.js            # DOM logic (modal toggle, story creation, mobile drawer)
+├── README.md            # Comprehensive project documentation
+└── .vscode/             # Editor workspace preferences
 ```
 
-## How to Run
+---
 
-1. Clone the repository:
+## 🔬 Codebase Analysis & Technical Highlights
 
-```bash
-git clone https://github.com/Sanjeet3065/Medium-Clone.git
-```
+### 1. Semantic Architecture (`medium.html`)
+The HTML is structured with modern HTML5 semantics for accessibility and clear hierarchy:
+- `<header class="navbar">` encapsulates brand identity, search, and navigation CTAs.
+- `<div class="container">` coordinates the primary 3-column desktop layout.
+- `<aside class="left-sidebar">` and `<aside class="right-sidebar">` provide contextual navigation and recommendations.
+- `<main class="feed">` hosts individual `<article class="post">` elements containing author metadata, headers, excerpts, and reading times.
+- `<div class="editor-modal">` serves as an accessible overlay container for the story creation dialog.
 
-2. Open the project folder.
+### 2. Layout & Responsive Design (`medium.css`)
+- **CSS Flexbox**: Employs flexible container proportions (`width: 18%` for left nav, `width: 52%` for main feed, `width: 30%` for right widgets) replicating Medium's signature reading proportion.
+- **Off-Canvas Mobile Drawer**:
+  ```css
+  @media (max-width: 768px) {
+    .left-sidebar {
+      position: fixed;
+      top: 70px;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background: white;
+      transition: 0.3s;
+      z-index: 500;
+    }
+    .left-sidebar.active {
+      left: 0;
+    }
+  }
+  ```
+- **Modal Overlay**: Uses modern `inset: 0` fixed positioning with semi-transparent alpha backgrounds (`rgba(0, 0, 0, 0.5)`).
 
-3. Launch `medium.html` in your browser.
+### 3. JavaScript Event Engine (`medium.js`)
+- **Dynamic DOM Creation**: Rather than re-rendering the whole page, new posts are created in-memory with `document.createElement("article")` and inserted at the beginning of the feed using `feed.prepend(article)`.
+- **Defensive Validation**: Checks for whitespace-only or empty strings before publishing to preserve data cleanliness.
+- **State Class Toggling**: Toggles `.show` and `.active` classes to coordinate CSS transitions declaratively.
 
-You can also open it with a live preview extension such as VS Code Live Server for a better development experience.
+---
 
-## Implementation Highlights
+## 🚀 Getting Started
 
-### Layout
-The interface is divided into three main sections:
+Follow these steps to run the project locally on your machine:
 
-- header navigation
-- left sidebar
-- center content feed
-- right sidebar
+### Prerequisites
+You only need a modern web browser (Google Chrome, Firefox, Microsoft Edge, or Safari).
 
-This arrangement mirrors the structure of the Medium homepage and ensures a clean reading experience.
+### Installation & Execution
 
-### JavaScript Interactions
-The JavaScript file adds functionality for:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Sanjeet3065/Medium-Clone.git
+   ```
 
-- opening and closing the story creation modal
-- validating the title and description fields
-- adding a new article to the top of the feed
-- toggling the sidebar menu on mobile screens
+2. **Navigate to the project directory:**
+   ```bash
+   cd Medium-Clone
+   ```
 
-## Example Workflow
+3. **Open the application:**
+   - Double click `medium.html` to launch it directly in your default browser.
+   - Alternatively, use the **Live Server** extension in VS Code (`Right click on medium.html` ➔ `Open with Live Server`).
 
-- Click on the "Write" button
-- Enter a blog title and description
-- Press "Publish"
-- The article is added instantly to the feed
+---
 
-## Screenshots
+## 🎯 Key Learnings & Internship Takeaways
 
-The project currently focuses on a front-end static UI, and the interface is designed to closely resemble the Medium reading experience.
+Working on this task during the **Coding Blocks Internship** provided deep practical experience in:
+1. **Translating Design Specs into Code:** Analyzing real-world web apps and deconstructing complex interfaces into structured, reusable components.
+2. **Vanilla JS Mastery:** Developing core interactive functionalities without relying on third-party libraries or frameworks.
+3. **Responsive Web Design:** Mastering media queries and mobile layout considerations (collapsing navigation, touch targets, off-canvas drawers).
+4. **Clean Code & Git Practices:** Maintaining an organized repository structure with meaningful documentation.
 
-## Learning Outcome
+---
 
-This project helps in understanding:
+## 👨‍💻 Author
 
-- page layout using CSS Flexbox
-- responsive design principles
-- creating interactive UI elements using JavaScript
-- building a polished front-end interface from a real-world reference
+**Sanjeet Chauhan**  
+- **GitHub:** [@Sanjeet3065](https://github.com/Sanjeet3065)
+- **Role:** Web Development Intern @ [Coding Blocks](https://codingblocks.com/)
 
-## Author
+---
 
-Sanjeet
+## 📄 License & Attribution
 
-## Note
-
-This is a static front-end clone created for practice and demonstration purposes as part of the Coding Block internship task.
+This project is created strictly for **educational and learning purposes** as part of an internship task assigned by **Coding Blocks**. All design likeness and branding are the property of [Medium](https://medium.com).
