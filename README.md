@@ -5,8 +5,13 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-2EA44F?style=for-the-badge)](https://sanjeet3065.github.io/Medium-Clone/)
 
-A responsive, pixel-conscious front-end clone of the popular blogging platform **Medium**. This project was developed as a hands-on **Internship Task during the Coding Blocks Internship Program**, created to simulate real-world front-end engineering workflows using vanilla web technologies.
+A responsive, pixel-conscious front-end clone of the popular blogging platform **Medium**. This project was developed as a hands-on **Internship Task during the Coding Blocks Internship Program**, and it focuses on recreating a premium reading experience using semantic HTML, modern CSS, and interactive vanilla JavaScript.
+
+## 🌐 Live Demo
+
+Open the project here: [Medium Clone Demo](https://sanjeet3065.github.io/Medium-Clone/)
 
 ---
 
@@ -17,7 +22,7 @@ A responsive, pixel-conscious front-end clone of the popular blogging platform *
 > **Role:** Web Development Intern  
 > **Focus Areas:** Semantic Markup, CSS Flexbox Layouts, Responsive Breakpoints, and Dynamic DOM Manipulation  
 
-During the internship at **Coding Blocks**, interns were tasked with reverse-engineering and replicating the core user interface and interactions of a major web platform. This project serves as a showcase of:
+During the internship at **Coding Blocks**, interns were tasked with reverse-engineering and replicating the core user interface and interactions of a major web platform. This project serves as a practical implementation of that challenge, emphasizing clean structure and responsive layouts.
 - Translating real-world UI/UX designs into clean, maintainable HTML/CSS code.
 - Building robust component layouts without external UI frameworks (No Bootstrap/Tailwind — pure vanilla CSS).
 - Implementing dynamic, event-driven user interaction using vanilla JavaScript DOM APIs.
@@ -105,7 +110,7 @@ The HTML is structured with modern HTML5 semantics for accessibility and clear h
 - **Modal Overlay**: Uses modern `inset: 0` fixed positioning with semi-transparent alpha backgrounds (`rgba(0, 0, 0, 0.5)`).
 
 ### 3. JavaScript Event Engine (`medium.js`)
-- **Dynamic DOM Creation**: Rather than re-rendering the whole page, new posts are created in-memory with `document.createElement("article")` and inserted at the beginning of the feed using `feed.prepend(article)`.
+- **Dynamic DOM Creation**: Rather than re-rendering the whole page, new posts are created in-memory with `document.createElement("article")` and inserted at the beginning of the feed using `feed.prepend()`.
 - **Defensive Validation**: Checks for whitespace-only or empty strings before publishing to preserve data cleanliness.
 - **State Class Toggling**: Toggles `.show` and `.active` classes to coordinate CSS transitions declaratively.
 
@@ -156,4 +161,4 @@ Working on this task during the **Coding Blocks Internship** provided deep pract
 
 ## 📄 License & Attribution
 
-This project is created strictly for **educational and learning purposes** as part of an internship task assigned by **Coding Blocks**. All design likeness and branding are the property of [Medium](https://medium.com).
+This project is created strictly for **educational and learning purposes** as part of an internship task assigned by **Coding Blocks**. All design likeness and branding are the property of [Medium](https://medium.com/), used here for learning and UI replication purposes only.
